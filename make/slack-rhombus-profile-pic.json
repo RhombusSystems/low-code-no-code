@@ -6,7 +6,7 @@
             "module": "rhombus:Universal",
             "version": 1,
             "parameters": {
-                "__IMTCONN__": 3554918
+                "__IMTCONN__": "YOUR_RHOMBUS_CONNECTION_ID"
             },
             "mapper": {
                 "url": "/user/getUsersInOrg",
@@ -24,7 +24,7 @@
                                 "scoped": "true",
                                 "connection": "rhombus2"
                             },
-                            "label": "Angela's Key"
+                            "label": "YOUR_RHOMBUS_CONNECTION_NAME"
                         }
                     }
                 },
@@ -87,7 +87,7 @@
             "module": "slack:SearchUser",
             "version": 4,
             "parameters": {
-                "__IMTCONN__": 3684631
+                "__IMTCONN__": "YOUR_SLACK_CONNECTION_ID"
             },
             "mapper": {
                 "email": "{{17.emailCaseSensitive}}"
@@ -104,7 +104,7 @@
                                 "scoped": "true",
                                 "connection": "slack2"
                             },
-                            "label": "JGulley v5 Connection (jeremy)"
+                            "label": "YOUR_SLACK_CONNECTION_NAME"
                         }
                     }
                 },
@@ -198,7 +198,7 @@
             "module": "http:ActionSendDataAPIKeyAuth",
             "version": 3,
             "parameters": {
-                "auth": 62438,
+                "auth": "YOUR_API_KEY_AUTH_ID",
                 "handleErrors": false
             },
             "mapper": {
@@ -277,7 +277,7 @@
                     },
                     "parameters": {
                         "auth": {
-                            "label": "Rhombus Enterprise - Angela's Key"
+                            "label": "YOUR_API_KEY_AUTH_NAME"
                         }
                     }
                 },
@@ -519,7 +519,7 @@
                         "module": "rhombus:Universal",
                         "version": 1,
                         "parameters": {
-                            "__IMTCONN__": 3554918
+                            "__IMTCONN__": "YOUR_RHOMBUS_CONNECTION_ID"
                         },
                         "filter": {
                             "name": "Exists",
@@ -565,7 +565,7 @@
                                             "scoped": "true",
                                             "connection": "rhombus2"
                                         },
-                                        "label": "Angela's Key"
+                                        "label": "YOUR_RHOMBUS_CONNECTION_NAME"
                                     }
                                 }
                             },
