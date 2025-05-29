@@ -1,0 +1,601 @@
+{
+    "name": "Update Rhombus Console User Profile with Slack Image",
+    "flow": [
+        {
+            "id": 2,
+            "module": "rhombus:Universal",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3554918
+            },
+            "mapper": {
+                "url": "/user/getUsersInOrg",
+                "body": "{}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "rhombus2"
+                            },
+                            "label": "Angela's Key"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:rhombus2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 17,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{2.body.users}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "slack:SearchUser",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 3684631
+            },
+            "mapper": {
+                "email": "{{17.emailCaseSensitive}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 150
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "slack2"
+                            },
+                            "label": "JGulley v5 Connection (jeremy)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:slack2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "email",
+                        "type": "email",
+                        "label": "Email",
+                        "required": true
+                    }
+                ]
+            },
+            "onerror": [
+                {
+                    "id": 18,
+                    "module": "builtin:Ignore",
+                    "version": 1,
+                    "metadata": {
+                        "designer": {
+                            "x": 900,
+                            "y": 300
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "module": "http:ActionGetFile",
+            "version": 3,
+            "parameters": {
+                "handleErrors": false
+            },
+            "mapper": {
+                "url": "{{3.profile.image_512}}",
+                "method": "get",
+                "serializeUrl": false,
+                "shareCookies": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "hidden",
+                        "label": "Method"
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "module": "http:ActionSendDataAPIKeyAuth",
+            "version": 3,
+            "parameters": {
+                "auth": 62438,
+                "handleErrors": false
+            },
+            "mapper": {
+                "ca": "",
+                "qs": [
+                    {
+                        "name": "Content-Type",
+                        "value": "image/png"
+                    }
+                ],
+                "url": "https://api2.rhombussystems.com/api/upload/user/{{17.uuid}}",
+                "gzip": true,
+                "method": "post",
+                "headers": [
+                    {
+                        "name": "x-auth-scheme",
+                        "value": "api-token"
+                    }
+                ],
+                "timeout": "",
+                "useMtls": false,
+                "bodyType": "multipart_form_data",
+                "serializeUrl": false,
+                "shareCookies": false,
+                "parseResponse": true,
+                "followRedirect": true,
+                "formDataFields": [
+                    {
+                        "key": "file",
+                        "data": "{{11.data}}",
+                        "fileName": "{{11.fileName}}",
+                        "fieldType": "file"
+                    }
+                ],
+                "useQuerystring": false,
+                "followAllRedirects": false,
+                "rejectUnauthorized": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bodyType": {
+                            "label": "Multipart/form-data"
+                        },
+                        "formDataFields": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "fieldType": {
+                                        "mode": "chose",
+                                        "label": "File"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "auth": {
+                            "label": "Rhombus Enterprise - Angela's Key"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "auth",
+                        "type": "keychain:apikeyauth",
+                        "label": "Credentials",
+                        "required": true
+                    },
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "formDataFields",
+                        "spec": [
+                            {
+                                "name": "fieldType",
+                                "type": "select",
+                                "label": "Field type",
+                                "options": [
+                                    {
+                                        "label": "Text",
+                                        "value": "text",
+                                        "nested": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "File",
+                                        "value": "file",
+                                        "nested": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "data",
+                                                "type": "buffer",
+                                                "label": "Data",
+                                                "semantic": "file:data"
+                                            },
+                                            {
+                                                "help": "File name, including the suffix, e.g. invoice, xml",
+                                                "name": "fileName",
+                                                "type": "filename",
+                                                "label": "File name",
+                                                "semantic": "file:name"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Fields"
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": [
+                [
+                    {
+                        "id": 1,
+                        "module": "rhombus:Universal",
+                        "version": 1,
+                        "parameters": {
+                            "__IMTCONN__": 3554918
+                        },
+                        "filter": {
+                            "name": "Exists",
+                            "conditions": [
+                                [
+                                    {
+                                        "a": "{{3.id}}",
+                                        "o": "exist"
+                                    }
+                                ]
+                            ]
+                        },
+                        "mapper": {
+                            "url": "/upload/user/{{2.body.users[].uuid}}",
+                            "body": "{{11.data}}"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 0,
+                                "y": 606,
+                                "messages": [
+                                    {
+                                        "category": "link",
+                                        "severity": "warning",
+                                        "message": "The module is not connected to the data flow."
+                                    },
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Rhombus  - Make an API Call' [2] is not accessible."
+                                    },
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'HTTP - Get a file' [11] is not accessible."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "parameters": {
+                                    "__IMTCONN__": {
+                                        "data": {
+                                            "scoped": "true",
+                                            "connection": "rhombus2"
+                                        },
+                                        "label": "Angela's Key"
+                                    }
+                                }
+                            },
+                            "parameters": [
+                                {
+                                    "name": "__IMTCONN__",
+                                    "type": "account:rhombus2",
+                                    "label": "Connection",
+                                    "required": true
+                                }
+                            ],
+                            "expect": [
+                                {
+                                    "name": "url",
+                                    "type": "text",
+                                    "label": "URL",
+                                    "required": true
+                                },
+                                {
+                                    "name": "body",
+                                    "type": "any",
+                                    "label": "Body"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            ]
+        },
+        "zone": "us1.make.com",
+        "notes": []
+    }
+}
