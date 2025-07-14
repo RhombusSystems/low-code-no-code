@@ -1,0 +1,571 @@
+{
+    "name": "POS Transaction to Seekpoint Rhombus",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-sheets:watchRows",
+            "version": 2,
+            "parameters": {
+                "from": "drive",
+                "mode": "select",
+                "limit": 32,
+                "sheetId": "Example Transactions from POS",
+                "__IMTCONN__": 4309956,
+                "spreadsheetId": "/1hCaUYAoI6DfKeq5ussacXAMaAYSbX_eZWUjJjg2XxMo",
+                "tableFirstRow": "A1:Z1",
+                "includesHeaders": true,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -177,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "mode": {
+                            "label": "Search by path"
+                        },
+                        "sheetId": {
+                            "label": "Example Transactions from POS"
+                        },
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "My Google connection (benny.rhombus@gmail.com)"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Example Transactions from POS"
+                            ]
+                        },
+                        "includesHeaders": {
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Search Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "fromAll",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "valueRenderOption",
+                        "type": "select",
+                        "label": "Value render option",
+                        "validate": {
+                            "enum": [
+                                "FORMATTED_VALUE",
+                                "UNFORMATTED_VALUE",
+                                "FORMULA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "dateTimeRenderOption",
+                        "type": "select",
+                        "label": "Date and time render option",
+                        "validate": {
+                            "enum": [
+                                "SERIAL_NUMBER",
+                                "FORMATTED_STRING"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "text",
+                        "label": "Row with headers",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__ROW_NUMBER__",
+                        "type": "number",
+                        "label": "Row number"
+                    },
+                    {
+                        "name": "__SPREADSHEET_ID__",
+                        "type": "text",
+                        "label": "Spreadsheet ID"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "type": "text",
+                        "label": "Sheet"
+                    },
+                    {
+                        "name": "0",
+                        "type": "text",
+                        "label": "Order Id (A)"
+                    },
+                    {
+                        "name": "1",
+                        "type": "text",
+                        "label": "Order # (B)"
+                    },
+                    {
+                        "name": "2",
+                        "type": "text",
+                        "label": "Checks (C)"
+                    },
+                    {
+                        "name": "3",
+                        "type": "text",
+                        "label": "Opened (D)"
+                    },
+                    {
+                        "name": "4",
+                        "type": "text",
+                        "label": "# of Guests (E)"
+                    },
+                    {
+                        "name": "5",
+                        "type": "text",
+                        "label": "Tab Names (F)"
+                    },
+                    {
+                        "name": "6",
+                        "type": "text",
+                        "label": "Server (G)"
+                    },
+                    {
+                        "name": "7",
+                        "type": "text",
+                        "label": "Table (H)"
+                    },
+                    {
+                        "name": "8",
+                        "type": "text",
+                        "label": "Revenue Center (I)"
+                    },
+                    {
+                        "name": "9",
+                        "type": "text",
+                        "label": "Dining Area (J)"
+                    },
+                    {
+                        "name": "10",
+                        "type": "text",
+                        "label": "Service (K)"
+                    },
+                    {
+                        "name": "11",
+                        "type": "text",
+                        "label": "Dining Options (L)"
+                    },
+                    {
+                        "name": "12",
+                        "type": "text",
+                        "label": "Discount Amount (M)"
+                    },
+                    {
+                        "name": "13",
+                        "type": "text",
+                        "label": "Amount (N)"
+                    },
+                    {
+                        "name": "14",
+                        "type": "text",
+                        "label": "Tax (O)"
+                    },
+                    {
+                        "name": "15",
+                        "type": "text",
+                        "label": "Tip (P)"
+                    },
+                    {
+                        "name": "16",
+                        "type": "text",
+                        "label": "Gratuity (Q)"
+                    },
+                    {
+                        "name": "17",
+                        "type": "text",
+                        "label": "Total (R)"
+                    },
+                    {
+                        "name": "18",
+                        "type": "text",
+                        "label": "Voided (S)"
+                    },
+                    {
+                        "name": "19",
+                        "type": "text",
+                        "label": "Paid (T)"
+                    },
+                    {
+                        "name": "20",
+                        "type": "text",
+                        "label": "Closed (U)"
+                    },
+                    {
+                        "name": "21",
+                        "type": "text",
+                        "label": "Duration (Opened to Paid) (V)"
+                    },
+                    {
+                        "name": "22",
+                        "type": "text",
+                        "label": "Order Source (W)"
+                    },
+                    {
+                        "name": "23",
+                        "type": "text",
+                        "label": "Cameras (X)"
+                    },
+                    {
+                        "name": "24",
+                        "type": "text",
+                        "label": "(Y)"
+                    },
+                    {
+                        "name": "25",
+                        "type": "text",
+                        "label": "(Z)"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "util:SetVariable2",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "name": "date",
+                "scope": "roundtrip",
+                "value": "{{parseDate(1.`3`; \"MM-DD-YYYY HH:mm\")}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 103,
+                    "y": 3
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Variable name",
+                        "required": true
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "type": "any",
+                        "label": "Variable value"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "date",
+                        "type": "any",
+                        "label": "date"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "util:SetVariable2",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "name": "timestamp",
+                "scope": "roundtrip",
+                "value": "{{formatDate(2.date; \"X\") * 1000}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 367,
+                    "y": -23
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Variable name",
+                        "required": true
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "type": "any",
+                        "label": "Variable value"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "timestamp",
+                        "type": "any",
+                        "label": "timestamp"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 4,
+            "module": "rhombus:createCustomSeekpoint",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 4309988
+            },
+            "mapper": {
+                "name": "Order #: {{1.`1`}}",
+                "colors": "PURPLE",
+                "timestamp": "{{3.timestamp}}",
+                "description": "{{1.`10`}}",
+                "device_uuid": "{{1.`23`}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 642,
+                    "y": -8
+                },
+                "restore": {
+                    "expect": {
+                        "colors": {
+                            "mode": "chose",
+                            "label": "Purple"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "rhombus2"
+                            },
+                            "label": "The key the key the key"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:rhombus2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "device_uuid",
+                        "type": "text",
+                        "label": "Device UUID",
+                        "required": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name of Event",
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "type": "text",
+                        "label": "Description of event",
+                        "required": true
+                    },
+                    {
+                        "name": "timestamp",
+                        "type": "integer",
+                        "label": "Timestamp in UNIX ms",
+                        "required": true
+                    },
+                    {
+                        "name": "colors",
+                        "type": "select",
+                        "label": "Color",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "RED",
+                                "PURPLE",
+                                "ORANGE",
+                                "BLUE",
+                                "TEAL",
+                                "GRAY",
+                                "BLACK",
+                                "TAN"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "device_uuid",
+                        "type": "text",
+                        "label": "Device UUID",
+                        "required": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name of Event",
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "type": "text",
+                        "label": "Description of event",
+                        "required": true
+                    },
+                    {
+                        "name": "timestamp",
+                        "type": "integer",
+                        "label": "Timestamp in UNIX ms",
+                        "required": true
+                    },
+                    {
+                        "name": "colors",
+                        "type": "select",
+                        "label": "Color",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "RED",
+                                "PURPLE",
+                                "ORANGE",
+                                "BLUE",
+                                "TEAL",
+                                "GRAY",
+                                "BLACK",
+                                "TAN"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us1.make.com",
+        "notes": []
+    }
+}
