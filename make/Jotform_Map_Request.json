@@ -6,7 +6,7 @@
       "module": "jotform:watchForSubmissions",
       "version": 1,
       "parameters": {
-        "__IMTHOOK__": 1099769
+        "__IMTHOOK__": "__REDACTED_ID__"
       },
       "mapper": {},
       "metadata": {
@@ -16,12 +16,7 @@
         },
         "restore": {
           "parameters": {
-            "__IMTHOOK__": {
-              "data": {
-                "editable": "true"
-              },
-              "label": "My Submission watcher webhook"
-            }
+            "__IMTHOOK__": "__REDACTED_ID__"
           }
         },
         "parameters": [
@@ -263,7 +258,7 @@
       "module": "salesforce:searchRecordsInAnObject",
       "version": 3,
       "parameters": {
-        "__IMTCONN__": 1914659
+        "__IMTCONN__": "__REDACTED_ID__"
       },
       "mapper": {
         "limit": "1",
@@ -323,13 +318,7 @@
             }
           },
           "parameters": {
-            "__IMTCONN__": {
-              "data": {
-                "scoped": "true",
-                "connection": "salesforce"
-              },
-              "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-            }
+            "__IMTCONN__": "__REDACTED_ID__"
           }
         },
         "parameters": [
@@ -1679,7 +1668,7 @@
       "module": "salesforce:searchRecordsInAnObject",
       "version": 3,
       "parameters": {
-        "__IMTCONN__": 1914659
+        "__IMTCONN__": "__REDACTED_ID__"
       },
       "mapper": {
         "limit": "1",
@@ -1715,13 +1704,7 @@
             }
           },
           "parameters": {
-            "__IMTCONN__": {
-              "data": {
-                "scoped": "true",
-                "connection": "salesforce"
-              },
-              "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-            }
+            "__IMTCONN__": "__REDACTED_ID__"
           }
         },
         "parameters": [
@@ -3180,7 +3163,7 @@
               "module": "salesforce:searchRecordsInAnObject",
               "version": 3,
               "parameters": {
-                "__IMTCONN__": 1914659
+                "__IMTCONN__": "__REDACTED_ID__"
               },
               "mapper": {
                 "limit": "1",
@@ -3220,13 +3203,7 @@
                     }
                   },
                   "parameters": {
-                    "__IMTCONN__": {
-                      "data": {
-                        "scoped": "true",
-                        "connection": "salesforce"
-                      },
-                      "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-                    }
+                    "__IMTCONN__": "__REDACTED_ID__"
                   }
                 },
                 "parameters": [
@@ -4235,7 +4212,7 @@
                       "module": "slack:CreateMessage",
                       "version": 4,
                       "parameters": {
-                        "__IMTCONN__": 2474479
+                        "__IMTCONN__": "__REDACTED_ID__"
                       },
                       "filter": {
                         "name": "SE DNE",
@@ -4249,7 +4226,7 @@
                         ]
                       },
                       "mapper": {
-                        "text": "-------------------------------------\nMap request submitted:\n\n- Opp Number: {{1.request.q19_whatIs}}\n- AE: {{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}\nOpp Owner does not have an SE \n@paul \ud83e\udd2a \n\nAE has been notified to resubmit Mapping Request.\n-------------------------------------",
+                        "text": "__REDACTED_EMAIL__",
                         "parse": false,
                         "mrkdwn": true,
                         "channel": "C07GRAK6MSM",
@@ -4294,13 +4271,7 @@
                             }
                           },
                           "parameters": {
-                            "__IMTCONN__": {
-                              "data": {
-                                "scoped": "true",
-                                "connection": "slack3"
-                              },
-                              "label": "Rhombus Slack Bot (rhombiebot)"
-                            }
+                            "__IMTCONN__": "__REDACTED_ID__"
                           }
                         },
                         "parameters": [
@@ -4472,7 +4443,7 @@
                                 "scoped": "true",
                                 "connection": "smtp"
                               },
-                              "label": "SMTP-Mappings@rhombus-Benny's Login (SMTP benny.calderon@rhombus.com)"
+                              "label": "__REDACTED_EMAIL__"
                             },
                             "saveAfterSent": {
                               "label": "No"
@@ -4657,7 +4628,7 @@
                       "module": "salesforce:searchRecordsInAnObject",
                       "version": 3,
                       "parameters": {
-                        "__IMTCONN__": 1914659
+                        "__IMTCONN__": "__REDACTED_ID__"
                       },
                       "mapper": {
                         "limit": "1",
@@ -4701,13 +4672,7 @@
                             }
                           },
                           "parameters": {
-                            "__IMTCONN__": {
-                              "data": {
-                                "scoped": "true",
-                                "connection": "salesforce"
-                              },
-                              "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-                            }
+                            "__IMTCONN__": "__REDACTED_ID__"
                           }
                         },
                         "parameters": [
@@ -8710,7 +8675,7 @@
                                               "module": "cloudconvert:ConvertFile",
                                               "version": 2,
                                               "parameters": {
-                                                "__IMTCONN__": 2729074
+                                                "__IMTCONN__": "__REDACTED_ID__"
                                               },
                                               "filter": {
                                                 "name": "is a pdf",
@@ -8784,13 +8749,7 @@
                                                     }
                                                   },
                                                   "parameters": {
-                                                    "__IMTCONN__": {
-                                                      "data": {
-                                                        "scoped": "true",
-                                                        "connection": "cloudconvert2"
-                                                      },
-                                                      "label": "JGulley- CloudConvert (rhombus_jeremy)"
-                                                    }
+                                                    "__IMTCONN__": "__REDACTED_ID__"
                                                   }
                                                 },
                                                 "parameters": [
@@ -8925,7 +8884,7 @@
                                               "module": "cloudconvert:GetJob",
                                               "version": 2,
                                               "parameters": {
-                                                "__IMTCONN__": 2729074
+                                                "__IMTCONN__": "__REDACTED_ID__"
                                               },
                                               "mapper": {
                                                 "id": "{{133.id}}"
@@ -8937,13 +8896,7 @@
                                                 },
                                                 "restore": {
                                                   "parameters": {
-                                                    "__IMTCONN__": {
-                                                      "data": {
-                                                        "scoped": "true",
-                                                        "connection": "cloudconvert2"
-                                                      },
-                                                      "label": "JGulley- CloudConvert (rhombus_jeremy)"
-                                                    }
+                                                    "__IMTCONN__": "__REDACTED_ID__"
                                                   }
                                                 },
                                                 "parameters": [
@@ -12870,7 +12823,7 @@
                                               "module": "cloudconvert:ConvertFile",
                                               "version": 2,
                                               "parameters": {
-                                                "__IMTCONN__": 2729074
+                                                "__IMTCONN__": "__REDACTED_ID__"
                                               },
                                               "filter": {
                                                 "name": "is a pdf",
@@ -12944,13 +12897,7 @@
                                                     }
                                                   },
                                                   "parameters": {
-                                                    "__IMTCONN__": {
-                                                      "data": {
-                                                        "scoped": "true",
-                                                        "connection": "cloudconvert2"
-                                                      },
-                                                      "label": "JGulley- CloudConvert (rhombus_jeremy)"
-                                                    }
+                                                    "__IMTCONN__": "__REDACTED_ID__"
                                                   }
                                                 },
                                                 "parameters": [
@@ -13085,7 +13032,7 @@
                                               "module": "cloudconvert:GetJob",
                                               "version": 2,
                                               "parameters": {
-                                                "__IMTCONN__": 2729074
+                                                "__IMTCONN__": "__REDACTED_ID__"
                                               },
                                               "mapper": {
                                                 "id": "{{65.id}}"
@@ -13097,13 +13044,7 @@
                                                 },
                                                 "restore": {
                                                   "parameters": {
-                                                    "__IMTCONN__": {
-                                                      "data": {
-                                                        "scoped": "true",
-                                                        "connection": "cloudconvert2"
-                                                      },
-                                                      "label": "JGulley- CloudConvert (rhombus_jeremy)"
-                                                    }
+                                                    "__IMTCONN__": "__REDACTED_ID__"
                                                   }
                                                 },
                                                 "parameters": [
@@ -15220,7 +15161,7 @@
               "module": "slack:CreateMessage",
               "version": 4,
               "parameters": {
-                "__IMTCONN__": 1914667
+                "__IMTCONN__": "__REDACTED_ID__"
               },
               "filter": {
                 "name": "no exists",
@@ -15278,13 +15219,7 @@
                     }
                   },
                   "parameters": {
-                    "__IMTCONN__": {
-                      "data": {
-                        "scoped": "true",
-                        "connection": "slack2"
-                      },
-                      "label": "Jeremy Gulley - Rhombus - Slack (jeremy)"
-                    }
+                    "__IMTCONN__": "__REDACTED_ID__"
                   }
                 },
                 "parameters": [
@@ -15400,7 +15335,7 @@
               "module": "salesforce:searchRecordsInAnObject",
               "version": 3,
               "parameters": {
-                "__IMTCONN__": 1914659
+                "__IMTCONN__": "__REDACTED_ID__"
               },
               "mapper": {
                 "limit": "1",
@@ -15440,13 +15375,7 @@
                     }
                   },
                   "parameters": {
-                    "__IMTCONN__": {
-                      "data": {
-                        "scoped": "true",
-                        "connection": "salesforce"
-                      },
-                      "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-                    }
+                    "__IMTCONN__": "__REDACTED_ID__"
                   }
                 },
                 "parameters": [
@@ -16441,7 +16370,7 @@
               "module": "salesforce:searchRecordsInAnObject",
               "version": 3,
               "parameters": {
-                "__IMTCONN__": 1914659
+                "__IMTCONN__": "__REDACTED_ID__"
               },
               "mapper": {
                 "limit": "1",
@@ -16485,13 +16414,7 @@
                     }
                   },
                   "parameters": {
-                    "__IMTCONN__": {
-                      "data": {
-                        "scoped": "true",
-                        "connection": "salesforce"
-                      },
-                      "label": "Jeremy Gulley - Rhombus - SFDC (jeremy@rhombussystems.com)"
-                    }
+                    "__IMTCONN__": "__REDACTED_ID__"
                   }
                 },
                 "parameters": [
@@ -17731,7 +17654,7 @@
                           "{{1.request.q5_yourEmail}}"
                         ],
                         "bcc": [],
-                        "from": "mapping@rhombus.com",
+                        "from": "__REDACTED_EMAIL__",
                         "html": "<div id=\"qid_created_at\" class=\"jfAnswer jfSubmission-answer isSubmissionDate\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; overflow-wrap: break-word; position: relative; padding: 6px 0px; margin-bottom: 6px; color: rgb(17, 17, 17); font-family: Circular, -apple-system, \" system-ui\",=\"\" \"segoe=\"\" ui\",=\"\" roboto,=\"\" helvetica,=\"\" arial,=\"\" sans-serif,=\"\" \"apple=\"\" color=\"\" emoji\",=\"\" ui=\"\" symbol\";=\"\" font-size:=\"\" medium;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><div class=\"sc-iNGGcK jQcGUH jfAnswer-container\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; display: flex; flex-flow: row; z-index: 1; font-size: 14px; position: relative;\"><div class=\"sc-eJwWfJ kRNACK jfAnswer-question\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; flex: 0 0 30%; margin: 0px 0px 2px; color: rgb(111, 118, 167); text-rendering: geometricprecision; padding-top: 2px; padding-right: 12px;\"><div class=\"sc-jeraig imiWja sc-gLDmcm kBlime jfAnswer-question-text\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; font-size: 15px; letter-spacing: 0.25px; word-break: break-word; min-height: 40px; position: sticky; top: 80px;\"><div id=\"qid_created_at\" class=\"jfAnswer jfSubmission-answer isSubmissionDate\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; overflow-wrap: break-word; position: relative; padding: 6px 0px; margin-bottom: 6px; color: rgb(17, 17, 17); font-size: medium; letter-spacing: normal;\"><div class=\"sc-iNGGcK jQcGUH jfAnswer-container\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; display: flex; flex-flow: row; z-index: 1; font-size: 14px; position: relative;\"><div class=\"sc-eJwWfJ kRNACK jfAnswer-question\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; flex: 0 0 30%; margin: 0px 0px 2px; color: rgb(111, 118, 167); text-rendering: geometricprecision; padding-top: 2px; padding-right: 12px;\"><div class=\"sc-jeraig imiWja sc-gLDmcm kBlime jfAnswer-question-text\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; font-size: 15px; letter-spacing: 0.25px; word-break: break-word; min-height: 40px; position: sticky; top: 80px;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" id=\"emailFieldsTable\" style=\"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Aptos; font-size: 16px; letter-spacing: normal; width: 568px; border-collapse: collapse;\"><tbody><tr id=\"row_19\"><td width=\"30%\" valign=\"top\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">What Is The Order Number of the Salesforce Opportunity?</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_19\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q19_whatIs}}</span></p></td></tr><tr id=\"row_32\"><td width=\"30%\" valign=\"top\" id=\"question_32\" style=\"width: 166.40625px; padding: 9pt 3pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Estimated Number of Devices (not including sensors)</span></p></td><td width=\"70%\" id=\"value_32\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody><tr><td data-ogsb=\"rgb(208, 240, 254)\" style=\"background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-color: rgb(208, 240, 254) !important; padding: 4.5pt 9pt;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"color: rgb(10, 21, 81) !important;\">{{1.request.q32_estimatedNumber}}</span></p></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr id=\"row_3\"><td width=\"30%\" valign=\"top\" id=\"question_3\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Requested From</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_3\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}</span></p></td></tr><tr id=\"row_5\"><td width=\"30%\" valign=\"top\" id=\"question_5\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Requestor Email</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_5\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\"><a href=\"mailto:{{1.request.q5_yourEmail}}\" class=\"ms-outlook-linkify\" data-ogsc=\"\" style=\"color: rgb(0, 134, 240);\">{{1.request.q5_yourEmail}}</a></span></p></td></tr><tr id=\"row_19\"><td width=\"30%\" valign=\"top\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Total Bill of Materials Report Needed</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_19\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q34_typeA34}}</span></p></td><tr id=\"row_20\"><td width=\"30%\" valign=\"top\" id=\"question_20\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\"> </span></p></td><td width=\"70%\" valign=\"top\" id=\"value_20\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody></tbody></table></tbody></table><tr id=\"row_23\"><td width=\"30%\" valign=\"top\" id=\"question_23\" style=\"width: 166.40625px; padding: 9pt 3pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Features Required</span></p></td><td width=\"70%\" id=\"value_23\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody><tr><td data-ogsb=\"rgb(208, 240, 254)\" style=\"background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-color: rgb(208, 240, 254) !important; padding: 4.5pt 9pt;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"color: rgb(10, 21, 81) !important;\">{{1.request.q23_featuresRequired}}</span></p></td></tr></tbody></table></tbody></table></td></tr><tr id=\"row_6\"><td width=\"30%\" valign=\"top\" id=\"question_6\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Detailed description of what you're trying to achieve</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_6\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q6_detailedDescription}}</span></p></td></tr><tr id=\"row_6\"><td width=\"30%\" valign=\"top\" id=\"question_6\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">When Is This Due By? (At least 5 days is required; If immediately needed notify SE)</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_6\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}</span></p></td></tr></tbody></table> </div></div></div></div></div></div></div></div>\n\n---------------------------------\nNOTE: YOU MUST UPDATE YOUR API TOKEN - IT IS INVALID - GUIDE HERE \nhttps://app.storylane.io/share/tynzvd6hv5mp\n\n{{newline}}<https://rhombussystems.lightning.force.com/lightning/r/Opportunity/{{8.Id}}/view|Link to Opp>\n\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>\n",
                         "sender": "",
                         "headers": [],
@@ -17782,7 +17705,7 @@
                                 "scoped": "true",
                                 "connection": "smtp"
                               },
-                              "label": "SMTP-Mappings@rhombus-Benny's Login (SMTP benny.calderon@rhombus.com)"
+                              "label": "__REDACTED_EMAIL__"
                             },
                             "saveAfterSent": {
                               "label": "No"
@@ -17964,10 +17887,10 @@
                       "module": "slack:CreateMessage",
                       "version": 4,
                       "parameters": {
-                        "__IMTCONN__": 2474479
+                        "__IMTCONN__": "__REDACTED_ID__"
                       },
                       "mapper": {
-                        "text": "-------------------------------------\nMap request submitted:\n- Opp Number: {{1.request.q19_whatIs}}\n <https://rhombussystems.lightning.force.com/lightning/r/Opportunity/{{8.Id}}/view|Link to Opp>\n\n- AE: {{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}\n- SE: {{74.FirstName}} {{74.LastName}}\n- Submitted Date: {{formatDate(now; \"MM/DD/YYYY\")}}\n- Due Date: {{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}\n\n{{newline}}Desc: {{1.request.q6_detailedDescription}}\n{{newline}}\n\n\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>\n\n{{74.FirstName}} please update your S.S. API token - <https://app.storylane.io/share/tynzvd6hv5mp|[Follow Guide]>\n-------------------------------------",
+                        "text": "-------------------------------------\nMap request submitted:\n- Opp Number: {{1.request.q19_whatIs}}\n {{8.Id}}/view|Link to Opp>\n\n- AE: {{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}\n- SE: {{74.FirstName}} {{74.LastName}}\n- Submitted Date: {{formatDate(now; \"MM/DD/YYYY\")}}\n- Due Date: {{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}\n\n{{newline}}Desc: {{1.request.q6_detailedDescription}}\n{{newline}}\n\n\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>\n\n{{74.FirstName}} please update your S.S. API token - <https://app.storylane.io/share/tynzvd6hv5mp|[Follow Guide]>\n-------------------------------------",
                         "parse": false,
                         "mrkdwn": true,
                         "channel": "C07GRAK6MSM",
@@ -18012,13 +17935,7 @@
                             }
                           },
                           "parameters": {
-                            "__IMTCONN__": {
-                              "data": {
-                                "scoped": "true",
-                                "connection": "slack3"
-                              },
-                              "label": "Rhombus Slack Bot (rhombiebot)"
-                            }
+                            "__IMTCONN__": "__REDACTED_ID__"
                           }
                         },
                         "parameters": [
@@ -18157,7 +18074,7 @@
                           "{{1.request.q5_yourEmail}}"
                         ],
                         "bcc": [],
-                        "from": "mapping@rhombus.com",
+                        "from": "__REDACTED_EMAIL__",
                         "html": "<div id=\"qid_created_at\" class=\"jfAnswer jfSubmission-answer isSubmissionDate\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; overflow-wrap: break-word; position: relative; padding: 6px 0px; margin-bottom: 6px; color: rgb(17, 17, 17); font-family: Circular, -apple-system, \" system-ui\",=\"\" \"segoe=\"\" ui\",=\"\" roboto,=\"\" helvetica,=\"\" arial,=\"\" sans-serif,=\"\" \"apple=\"\" color=\"\" emoji\",=\"\" ui=\"\" symbol\";=\"\" font-size:=\"\" medium;=\"\" background-color:=\"\" rgb(255,=\"\" 255,=\"\" 255);\"=\"\"><div class=\"sc-iNGGcK jQcGUH jfAnswer-container\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; display: flex; flex-flow: row; z-index: 1; font-size: 14px; position: relative;\"><div class=\"sc-eJwWfJ kRNACK jfAnswer-question\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; flex: 0 0 30%; margin: 0px 0px 2px; color: rgb(111, 118, 167); text-rendering: geometricprecision; padding-top: 2px; padding-right: 12px;\"><div class=\"sc-jeraig imiWja sc-gLDmcm kBlime jfAnswer-question-text\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; font-size: 15px; letter-spacing: 0.25px; word-break: break-word; min-height: 40px; position: sticky; top: 80px;\"><div id=\"qid_created_at\" class=\"jfAnswer jfSubmission-answer isSubmissionDate\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; overflow-wrap: break-word; position: relative; padding: 6px 0px; margin-bottom: 6px; color: rgb(17, 17, 17); font-size: medium; letter-spacing: normal;\"><div class=\"sc-iNGGcK jQcGUH jfAnswer-container\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; display: flex; flex-flow: row; z-index: 1; font-size: 14px; position: relative;\"><div class=\"sc-eJwWfJ kRNACK jfAnswer-question\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; flex: 0 0 30%; margin: 0px 0px 2px; color: rgb(111, 118, 167); text-rendering: geometricprecision; padding-top: 2px; padding-right: 12px;\"><div class=\"sc-jeraig imiWja sc-gLDmcm kBlime jfAnswer-question-text\" style=\"box-sizing: border-box; -webkit-font-smoothing: antialiased; outline: none; font-size: 15px; letter-spacing: 0.25px; word-break: break-word; min-height: 40px; position: sticky; top: 80px;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" id=\"emailFieldsTable\" style=\"caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Aptos; font-size: 16px; letter-spacing: normal; width: 568px; border-collapse: collapse;\"><tbody><tr id=\"row_19\"><td width=\"30%\" valign=\"top\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">What Is The Order Number of the Salesforce Opportunity?</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_19\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q19_whatIs}}</span></p></td></tr><tr id=\"row_32\"><td width=\"30%\" valign=\"top\" id=\"question_32\" style=\"width: 166.40625px; padding: 9pt 3pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Estimated Number of Devices (not including sensors)</span></p></td><td width=\"70%\" id=\"value_32\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody><tr><td data-ogsb=\"rgb(208, 240, 254)\" style=\"background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-color: rgb(208, 240, 254) !important; padding: 4.5pt 9pt;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"color: rgb(10, 21, 81) !important;\">{{1.request.q32_estimatedNumber}}</span></p></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr id=\"row_3\"><td width=\"30%\" valign=\"top\" id=\"question_3\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Requested From</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_3\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}</span></p></td></tr><tr id=\"row_5\"><td width=\"30%\" valign=\"top\" id=\"question_5\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Requestor Email</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_5\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\"><a href=\"mailto:{{1.request.q5_yourEmail}}\" class=\"ms-outlook-linkify\" data-ogsc=\"\" style=\"color: rgb(0, 134, 240);\">{{1.request.q5_yourEmail}}</a></span></p></td></tr><tr id=\"row_19\"><td width=\"30%\" valign=\"top\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Total Bill of Materials Report Needed</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_19\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q34_typeA34}}</span></p></td><tr id=\"row_20\"><td width=\"30%\" valign=\"top\" id=\"question_20\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\"> </span></p></td><td width=\"70%\" valign=\"top\" id=\"value_20\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody></tbody></table></tbody></table><tr id=\"row_23\"><td width=\"30%\" valign=\"top\" id=\"question_23\" style=\"width: 166.40625px; padding: 9pt 3pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Features Required</span></p></td><td width=\"70%\" id=\"value_23\" style=\"width: 397.609375px; padding: 9pt 0in;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; display: inline-block;\"><tbody><tr><td style=\"padding: 0in 6pt 3pt 0in; display: inline-block;\"><table class=\"MsoNormalTable\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border-radius: 4px;\"><tbody><tr><td data-ogsb=\"rgb(208, 240, 254)\" style=\"background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-color: rgb(208, 240, 254) !important; padding: 4.5pt 9pt;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"color: rgb(10, 21, 81) !important;\">{{1.request.q23_featuresRequired}}</span></p></td></tr></tbody></table></tbody></table></td></tr><tr id=\"row_6\"><td width=\"30%\" valign=\"top\" id=\"question_6\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">Detailed description of what you're trying to achieve</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_6\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q6_detailedDescription}}</span></p></td></tr><tr id=\"row_6\"><td width=\"30%\" valign=\"top\" id=\"question_6\" style=\"width: 162.40625px; padding: 9pt 6pt 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(111, 118, 167)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(111, 118, 167) !important; line-height: 1.2;\">When Is This Due By? (At least 5 days is required; If immediately needed notify SE)</span></p></td><td width=\"70%\" valign=\"top\" id=\"value_6\" style=\"width: 397.609375px; padding: 9pt 0in;\"><p class=\"MsoNormal\" style=\"margin: 0in; font-size: 10pt; font-family: Calibri, sans-serif;\"><span data-ogsc=\"rgb(10, 21, 81)\" style=\"font-size: 10.5pt; font-family: Helvetica; color: rgb(10, 21, 81) !important; line-height: 1.2;\">{{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}</span></p></td></tr></tbody></table> </div></div></div></div></div></div></div></div>\n{{newline}}<https://rhombussystems.lightning.force.com/lightning/r/Opportunity/{{8.Id}}/view|Link to Opp>\n\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>",
                         "sender": "",
                         "headers": [],
@@ -18208,7 +18125,7 @@
                                 "scoped": "true",
                                 "connection": "smtp"
                               },
-                              "label": "SMTP-Mappings@rhombus-Benny's Login (SMTP benny.calderon@rhombus.com)"
+                              "label": "__REDACTED_EMAIL__"
                             },
                             "saveAfterSent": {
                               "label": "No"
@@ -18390,10 +18307,10 @@
                       "module": "slack:CreateMessage",
                       "version": 4,
                       "parameters": {
-                        "__IMTCONN__": 2474479
+                        "__IMTCONN__": "__REDACTED_ID__"
                       },
                       "mapper": {
-                        "text": "-------------------------------------\nMap request submitted:\n- Opp Number: {{1.request.q19_whatIs}}  - <https://rhombussystems.lightning.force.com/lightning/r/Opportunity/{{8.Id}}/view|Link to Opp> \n- AE: {{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}\n- SE: {{74.FirstName}} {{74.LastName}}\n- Submitted Date: {{formatDate(now; \"MM/DD/YYYY\")}}\n- Due Date: {{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}\n{{newline}}Desc: {{1.request.q6_detailedDescription}}\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>\n-------------------------------------",
+                        "text": "-------------------------------------\nMap request submitted:\n- Opp Number: {{1.request.q19_whatIs}}  - <{{8.Id}}/view|Link to Opp> \n- AE: {{1.request.q3_yourName.first}} {{1.request.q3_yourName.last}}\n- SE: {{74.FirstName}} {{74.LastName}}\n- Submitted Date: {{formatDate(now; \"MM/DD/YYYY\")}}\n- Due Date: {{1.request.q16_whenIs.month}}/{{1.request.q16_whenIs.day}}/{{1.request.q16_whenIs.year}}\n{{newline}}Desc: {{1.request.q6_detailedDescription}}\n{{newline}}<https://app.systemsurveyor.com/v2/site/{{118.`Site ID`}}/team/{{118.`Team ID`}}| Link to Site>\n-------------------------------------",
                         "parse": false,
                         "mrkdwn": true,
                         "channel": "C07GRAK6MSM",
@@ -18438,13 +18355,7 @@
                             }
                           },
                           "parameters": {
-                            "__IMTCONN__": {
-                              "data": {
-                                "scoped": "true",
-                                "connection": "slack3"
-                              },
-                              "label": "Rhombus Slack Bot (rhombiebot)"
-                            }
+                            "__IMTCONN__": "__REDACTED_ID__"
                           }
                         },
                         "parameters": [
